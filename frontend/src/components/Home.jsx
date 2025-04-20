@@ -1,34 +1,13 @@
 import React from 'react';
+import Nav from './Nav';
 
-function Card() {
+function Home() {
   return (
-    <div className="bg-white text-gray-900 w-screen">
+    <div className="bg-white w-screen">
       {/* Header */}
-      <header className="w-full border-b border-black-200">
-        <nav
-          aria-label="Primary Navigation"
-          className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
-        >
-          <div className="flex items-center space-x-10">
-            <a className="flex-shrink-0" href="#">
-              <img
-                alt="FERMATA logo in black Montserrat font"
-                className="block"
-                height="30"
-                src="https://storage.googleapis.com/a1aa/image/2f0cd41a-fb70-4f42-8e17-be01ee2a7fe5.jpg"
-                width="140"
-              />
-            </a>
+      <header className="w-full border-b border-black-200 bg-black">
+        <Nav></Nav>
 
-            {/* Nav Items */}
-            <ul className='flex flex-row gap-10 fontt-semibold'>
-                <li><a href="/about">About</a></li>
-                <li><a href="/detect">Detect</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/signup">Signup</a></li>
-            </ul>
-          </div>
-        </nav>
       </header>
 
       {/* Hero Section */}
@@ -40,17 +19,14 @@ function Card() {
           alt="Greenhouse plants"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center mix-blend-multiply"
-          src="https://storage.googleapis.com/a1aa/image/202fb1bb-4a6e-4d95-e8d4-dc5aaf92d9a3.jpg"
+          src="http://localhost:5173/home-bg.jpg"
         />
         <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28 lg:py-32">
           <h1 className="text-4xl sm:text-5xl font-extrabold max-w-4xl leading-tight">
             AI Pest &amp; Disease Detection
           </h1>
-          <p className="mt-4 max-w-2xl text-base sm:text-lg font-normal">
-            Design an AI-powered pest control system capable of analyzing real-time
-            images from drones or mobile devices to accurately detect harmful pests.
-            The solution should deliver early warnings and recommend eco-friendly
-            measures to effectively prevent and manage pest infestations.
+          <p className="mt-4 max-w-2xl text-base sm:text-md font-normal">
+            Our solution is an AI-powered pest control system that leverages real-time image analysis from drones and mobile devices to accurately detect harmful pests in agricultural fields. By using advanced machine learning models, the system identifies pest infestations early and sends instant alerts to farmers. Along with detection, it provides personalized, eco-friendly pest control recommendations to prevent crop damage, reduce chemical usage, and promote sustainable farming practices.
           </p>
 
           {/* Features */}
@@ -99,18 +75,22 @@ function Card() {
             </p>
           </div>
           <div className="flex space-x-4">
-            <button
-              type="button"
-              className="bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-5 rounded-md transition"
-            >
-              Login
-            </button>
-            <button
-              type="button"
-              className="border border-gray-400 text-gray-700 font-medium py-2 px-5 rounded-md hover:bg-gray-100 transition"
-            >
-              Sign In
-            </button>
+            <a href="/login">
+              <button
+                type="button"
+                className="bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-5 rounded-md transition"
+              >
+                Login
+              </button>
+            </a>
+            <a href="/signup">
+              <button
+                type="button"
+                className="border border-gray-400 text-gray-700 font-medium py-2 px-5 rounded-md hover:bg-gray-100 transition"
+              >
+                Sign In
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -118,4 +98,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Home;
